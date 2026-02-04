@@ -18,12 +18,12 @@ jobs:
           script: |
             cd /home/azureuser/app
             git pull
-            logs=$(docker-compose logs)
+            logs=$(sudo docker-compose logs)
             if [ -z "$logs" ]; then
-            docker-compose up -d --build
+            sudo docker-compose up -d --build
             elif
-            docker-compose down
-            docker-compose up -d --build
+            sudo docker-compose down
+            sudo docker-compose up -d --build
             fi
 
 
