@@ -4,7 +4,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello, FastAPI! V2"}
+    return {"message": "Hello, FastAPI! V3"}
 
 @app.get("/health")
 def health():
