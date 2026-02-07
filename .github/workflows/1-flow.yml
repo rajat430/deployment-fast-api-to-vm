@@ -23,5 +23,9 @@ jobs:
         if: ${{failure()}}
         run: |
           echo "hello world task3 in job2"
+
+      - name: job2-task4
+        run: |
+          echo "hello world task4 in job2"
           
 
