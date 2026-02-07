@@ -28,6 +28,7 @@ jobs:
           echo "hello world task4 in job2"
   job3:
     runs-on: ubuntu-latest
+    needs: job2
     steps:
       - name: job3-task1
         run: |
