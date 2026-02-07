@@ -11,7 +11,7 @@ jobs:
         run: |
           echo "hello world task1 in job1"
   job2:
-    if: ${{failure()}}
+    if: ${{success()}}
     needs: [job1]
     runs-on: ubuntu-latest
     steps:
