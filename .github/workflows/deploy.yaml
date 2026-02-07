@@ -15,7 +15,7 @@ jobs:
         run: |
             echo "hello world"
       - name: "Composite Action"
-        uses: rajat430/childproj/.github/actions/setup-java-build@main
+        uses: rajat430/childproj/.github/actions/setup-java-build@v7
         with:
           java-version: '21'
 
