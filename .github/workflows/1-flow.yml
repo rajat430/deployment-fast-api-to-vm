@@ -10,6 +10,7 @@ jobs:
       - name: task1
         run: |
           echo "hello world task1 in job1"
+          exit 1
   job2:
     if: ${{always()}}
     needs: [job1]
