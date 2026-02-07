@@ -19,4 +19,9 @@ jobs:
       - name: task2
         run: |
           echo "hello world task2 in job2"
+      - name: job2-task3
+        if: ${{failure()}}
+        run: |
+          echo "hello world task3 in job2"
+          
 
