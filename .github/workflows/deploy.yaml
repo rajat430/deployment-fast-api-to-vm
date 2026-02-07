@@ -8,11 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "checkout"
-        uses: actions/checkout@v2
+        if: github.ref == 'refs/heads/main'
+        uses: actions/checkout@v3
       - name: script
         id: runtask
         run: |
             echo "hello world"
+      - name: "Composite Action"
+        uses: rajat430/childproj/.github/actions/setup-java-build@v1
+        with:
+          java-version: '21'
+
       
 
 
