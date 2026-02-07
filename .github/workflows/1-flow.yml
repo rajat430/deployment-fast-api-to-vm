@@ -1,0 +1,21 @@
+name: flow1
+on:
+  push:
+    branches:
+      - main
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: task1
+        run: |
+          echo "hello world task1 in job1"
+  job2:
+    if: ${{always()}}
+    needs: [job1]
+    runs-on: ubuntu-latest
+    steps:
+      - name: task2
+        run: |
+          echo "hello world task2 in job2"
+
