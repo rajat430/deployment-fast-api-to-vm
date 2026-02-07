@@ -12,7 +12,6 @@ jobs:
           echo "hello world task1 in job1"
           exit 1
   job2:
-    if: ${{success()}}
     needs: [job1]
     runs-on: ubuntu-latest
     steps:
