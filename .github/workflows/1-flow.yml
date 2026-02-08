@@ -17,7 +17,6 @@ jobs:
       - name: task2
         run: |
           echo "hello world task2 in job2"
-          exit 1
       - name: job2-task3
         if: ${{failure()}}
         run: |
@@ -32,6 +31,11 @@ jobs:
       - name: job3-task1
         run: |
           echo "hello world task1 in job3"
+      - name: job-task2
+        shell: pwsh
+        run: |
+          Write-Output "hello world"
+
   
           
 
