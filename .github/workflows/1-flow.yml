@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: task1
         run: |
-          echo "hello world task1 in job1
+          echo "hello world task1 in job1"
       - name: task1
         run: |
           echo "hello world task1 in job1"
